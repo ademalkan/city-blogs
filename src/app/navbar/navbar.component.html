@@ -1,8 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Second navbar example">
     <div class=" container-fluid collapse navbar-collapse" id="navbarsExample02">
       <ul class="navbar-nav">
-        <li *ngFor="let city of navItems" class="nav-item">
-          <a class="nav-link" aria-current="page" href="#"> {{city.cityName}} </a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="" aria-current="page">CityBlogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" aria-current="page">About We</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="panel" aria-current="page">Login</a>
         </li>
       </ul>
     </div>

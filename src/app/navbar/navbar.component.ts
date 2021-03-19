@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   constructor() { }
   navItems: any[] = [
-    {cityName:'City Blogs', cityId: 0},
-    {cityName:'About We', cityId: 1},
+    {cityName:'City Blogs', router: "header"},
+    {cityName:'About We', router: 'about'},
   ];
   ngOnInit(): void {
   }

@@ -1,21 +1,43 @@
 <div class="form-group">
-  <input [(ngModel)]="filterText" id="searchInput" class="form-control form-control-lg" type="text"
-    placeholder="Search city">
+  <input
+    [(ngModel)]="filterText"
+    id="searchInput"
+    class="form-control form-control-lg"
+    type="text"
+    placeholder="Search city"
+  />
 </div>
-<div *ngFor="let content of citys | filter:filterText: 3 | slice:0:show; let i=index" class="jumbotron">
-  <h1 class="display-4 text-center"> {{content.cityName}} </h1>
-  <p class="lead text-center"> {{content.title}} </p>
-  <img [src]="content.cityImage" class="img-fluid" alt="Responsive image">
-  <hr class="my-4">
-  <p> {{ (showMore) ? content.text : content.text | slice:0:334}} </p>
-  <p class="lead">
-    <button *ngIf="!showMore" (click)="showMore=true" class="btn btn-primary btn-lg">Learn more</button>
-  </p>
 
+<div
+  *ngFor="
+    let content of citys | filter: filterText:3 | slice: 0:show;
+    let i = index
+  "
+  class="jumbotron"
+>
+  <h1 class="display-4 text-center">{{ content.cityName }}</h1>
+  <p class="lead text-center">{{ content.title }}</p>
+  <img [src]="content.cityImage" class="img-fluid" alt="Responsive image" />
+  <hr class="my-4" />
+  <p>{{ showMore ? content.text : (content.text | slice: 0:334) }}</p>
+  <p class="lead">
+    <button
+      *ngIf="!showMore"
+      (click)="showMore = true"
+      class="btn btn-primary btn-lg"
+    >
+      Learn more
+    </button>
+  </p>
 </div>
 <div class="form-group">
-  <button *ngIf="show < citys.length" (click)="increaseShow()"
-    class="form-control form-control-lg btn btn-primary btn-lg ">Show More Citys</button>
+  <button
+    *ngIf="show < citys.length"
+    (click)="increaseShow()"
+    class="form-control form-control-lg btn btn-primary btn-lg"
+  >
+    Show More Citys
+  </button>
   <div *ngIf="show > citys.length">
     <div class="alert alert-dark text-center" role="alert">
       <h4 class="alert-heading">Well done!</h4>

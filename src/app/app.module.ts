@@ -11,6 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { CityComponent } from './city/city.component';
 import { FilterPipe } from './navbar/filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { PanelComponent } from './panel/panel.component';
+import { ErrorComponent } from './error/error.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     AboutComponent,
     CityComponent,
-    FilterPipe
+    FilterPipe,
+    PanelComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
